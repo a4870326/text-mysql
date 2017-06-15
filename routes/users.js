@@ -1,54 +1,37 @@
+/*
+*   用途: User表 对应的路由
+*   作者: CarlosYin
+*   时间: 2017-06-15
+*   备注:
+*
+*/
+
 var express = require('express');
 var router = express.Router();
 
-var CUser = require('../controllers/users');
+var UserController = require('../controllers/UserController');
+
 
 /* GET users listing. */
 router.get('/', function (req, res, next) {
   console.log('ID:', req.ip);
+  UserController.getAllUser(res);
 
-
-  var mysql = require('mysql');
-  var connection = mysql.createConnection({
-    // host: 'localhost',
-    // user: 'root',
-    // database: 'myapp',
-    // password: '123456'
-
-     host: '172.18.23.144',
-    //host:'119.23.42.233',
-    user: 'root',
-    password: '03260107a',
-    database: 'text'
-  });
-
-  connection.connect();
-
-  connection.query('select * from user', function (err, rows, fields) {
-    if (err) throw err;
-    //console.log('The solution is: ', rows);
-    res.json(rows);
-  });
-
-  connection.end();
-
-
-
-
-  // var json = {
-  //   a: 1,
-  //   id: 23
-  // }
-
-
-
-  // res.json(json);
 });
+
+router.post('/getUserById', function (req, res, next) {
+  console.log('ID:', req.ip);
+  UserController.getUserById(req,res);
+
+});
+
+
+
 
 router.post('/', function (req, res, next) {
 
 
-  console.log('param:', req.body,CUser);
+  console.log('param:', req.body);
   var json = {
     a: 1,
     id: 23
