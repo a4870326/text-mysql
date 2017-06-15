@@ -15,9 +15,9 @@ router.get('/', function (req, res, next) {
     // database: 'myapp',
     // password: '123456'
 
-    host: '119.23.50.17',
+    host: '119.23.42.233',
     user: 'root',
-    password: '123456',
+    password: '03260107a',
     database: 'text'
   });
 
