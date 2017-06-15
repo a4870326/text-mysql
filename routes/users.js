@@ -15,10 +15,10 @@ router.get('/', function (req, res, next) {
     // database: 'myapp',
     // password: '123456'
 
-    host: 'rm-wz9eii6ux055l5u4jo.mysql.rds.aliyuncs.com',
-    user: 'carloyin',
-    database: 'test',
-    password: '03260107aA'
+    host: '119.23.50.17',
+    user: 'root',
+    password: '123456',
+    database: 'text'
   });
 
   connection.connect();
