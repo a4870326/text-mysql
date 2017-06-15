@@ -14,7 +14,7 @@ router.get('/', function (req, res, next) {
     user: 'carloyin',
     database: 'test',
     password: '03260107aA'
-  });
+  }); 
 
   connection.connect();
 
