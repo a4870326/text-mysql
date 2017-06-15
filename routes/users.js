@@ -5,7 +5,7 @@ var CUser = require('../controllers/users');
 
 /* GET users listing. */
 router.get('/', function (req, res, next) {
-  console.log('ID:', req.url, req.query, req.body);
+  console.log('ID:', req.ip);
 
 
   var mysql = require('mysql');
@@ -15,7 +15,8 @@ router.get('/', function (req, res, next) {
     // database: 'myapp',
     // password: '123456'
 
-    host: '172.18.23.144',
+     host: '172.18.23.144',
+    //host:'119.23.42.233',
     user: 'root',
     password: '03260107a',
     database: 'text'
@@ -25,7 +26,7 @@ router.get('/', function (req, res, next) {
 
   connection.query('select * from user', function (err, rows, fields) {
     if (err) throw err;
-    console.log('The solution is: ', rows);
+    //console.log('The solution is: ', rows);
     res.json(rows);
   });
 
