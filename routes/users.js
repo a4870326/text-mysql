@@ -10,11 +10,16 @@ router.get('/', function (req, res, next) {
 
   var mysql = require('mysql');
   var connection = mysql.createConnection({
-    host: 'rm-wz9eii6ux055l5u4j.mysql.rds.aliyuncs.com:3306',
+    // host: 'localhost',
+    // user: 'root',
+    // database: 'myapp',
+    // password: '123456'
+
+    host: 'rm-wz9eii6ux055l5u4j.mysql.rds.aliyuncs.com',
     user: 'carloyin',
     database: 'test',
     password: '03260107aA'
-  }); 
+  });
 
   connection.connect();
 
