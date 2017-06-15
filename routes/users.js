@@ -1,5 +1,5 @@
-let express = require('express');
-let router = express.Router();
+var express = require('express');
+var router = express.Router();
 
 var CUser = require('../controllers/users');
 
@@ -8,7 +8,7 @@ router.get('/', function (req, res, next) {
   console.log('ID:', req.url, req.query, req.body);
 
 
-  let mysql = require('mysql');
+  var mysql = require('mysql');
   var connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
